@@ -1,0 +1,41 @@
+---
+experiment:
+  name: deca/ut
+dataset:
+  data_dir: ut-zap50k
+  dataset: utzappos
+  splitname: compositional-split-natural
+  open_world: false
+model_params:
+  model: deca
+  dropout: true
+  norm: true
+  nlayers: 2
+  relu: false
+  fc_emb: 512
+  emb_dim: 300
+  emb_init: word2vec
+  image_extractor: resnet18
+  train_only: true
+  static_inp: false
+training:
+  seed: 2021
+  cudnn_benchmark: false
+  cudnn_deterministic: true
+  batch_size: 256
+  load:
+  lr: 5.0e-04
+  lrg: 5.0e-06
+  max_epochs: 150
+  norm_family: imagenet
+  save_every: 10000
+  test_batch_size: 64
+  test_set: val
+  topk: 1
+  wd: 5.0e-05
+  workers: 8
+  update_features: false
+  freeze_features: false
+  eval_val_every: 1
+  similarity: cos
+  alpha: 0.4
