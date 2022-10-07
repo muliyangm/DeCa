@@ -28,10 +28,9 @@ conda activate czsl
 ```
 
 
-Also, please use the codes below to download the datasets and embeddings:
+Also, please use the code below to download the datasets and embeddings:
 ```
 bash ./utils/download_data.sh DATA_ROOT
-mkdir logs
 ```
 in which `DATA_ROOT` is the path where you would like to store the data.
 
