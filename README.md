@@ -45,7 +45,7 @@ python train.py --config CONFIG_FILE
 ```
 in which `CONFIG_FILE` is the path to the configuration file of the model. One can find it in the `./configs` folder, whose original definition can be found in `./flags.py`.
 
-We can also use `CUDA_VISIBLE_DEVICES=GPU_IDs` to specify CUDA resources. For instance, to train a DeCa model on Mit-States on GPU 0, just run
+We can also use `CUDA_VISIBLE_DEVICES=GPU_IDs` to specify CUDA resources. For instance, to train a DeCa model on Mit-States using GPU 0, just run
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py --config configs/deca/mit.yml
 ```
