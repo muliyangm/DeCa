@@ -5,7 +5,6 @@ dataset:
   data_dir: ut-zap50k
   dataset: utzappos
   splitname: compositional-split-natural
-  open_world: false
 model_params:
   model: deca
   dropout: true
@@ -26,6 +25,7 @@ training:
   load:
   lr: 5.0e-04
   lrg: 5.0e-06
+  cosine_scale: 50
   max_epochs: 150
   norm_family: imagenet
   save_every: 10000

@@ -21,7 +21,7 @@ Code for the IEEE Trans. Multimedia paper:
 
 This project is built on top of [CZSL](https://github.com/ExplainableML/czsl).
 Please follow its instructions to prepare the python environment.
-Specifically, one can use the following codes to create and activate a conda virtual environment with the specified packages (please first ensure Anaconda/Miniconda is in use):
+Specifically, one can use the following codes to create and activate a conda virtual environment with the specified packages (please first ensure Anaconda or Miniconda is in use):
 ```
 conda env create --file environment.yml
 conda activate czsl
@@ -45,7 +45,7 @@ python train.py --config CONFIG_FILE
 ```
 in which `CONFIG_FILE` is the path to the configuration file of the model. One can find it in the `./configs` folder, whose original definition can be found in `./flags.py`.
 
-We can also use `CUDA_VISIBLE_DEVICES=GPU_IDs` to specify CUDA resources. For instance, to train a DeCa model on Mit-States using GPU 0, just run
+One can also use `CUDA_VISIBLE_DEVICES=GPU_IDs` to specify CUDA resources. For instance, to train a DeCa model on Mit-States using GPU 0, just run
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py --config configs/deca/mit.yml
 ```
@@ -59,7 +59,7 @@ python test.py --logpath LOG_DIR
 ```
 in which `LOG_DIR` is the path to the logs of a model (defined by the `name` argument in the config file).
 
-For instance, to test a trained DeCa model whose logs are stored in `./logs/deca/mit`, we can use  
+For instance, to test a trained DeCa model whose logs are stored in `./logs/deca/mit`, one can use  
 ```
 CUDA_VISIBLE_DEVICES=0 python test.py --logpath logs/deca/mit
 ```
@@ -101,7 +101,7 @@ If you use our code, please also consider citing the following two papers in [CZ
   organization={IEEE}
 }
 ```
-as well as this paper, since some scripts are also adapted from its [repository](https://github.com/Tushar-N/attributes-as-operators):
+as well as this paper (since some scripts are also adapted from its [repository](https://github.com/Tushar-N/attributes-as-operators)):
 ```
 @inproceedings{nagarajan2018attributes,
   title={Attributes as operators: factorizing unseen attribute-object compositions},
